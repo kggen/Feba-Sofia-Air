@@ -1,0 +1,12 @@
+name: sofia_air
+title: sofia_air
+username:
+account: sofiaairfeba
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 736326
+bundleId: 1895673
+url: https://sofiaairfeba.shinyapps.io/sofia_air/
+when: 1551004698.21808
+asMultiple: FALSE
+asStatic: FALSE
