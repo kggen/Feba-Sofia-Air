@@ -1,7 +1,7 @@
 library(shiny)
 library(leaflet)
 library(RColorBrewer)
-
+library(intrval)
 
 ui <- bootstrapPage(
   titlePanel("FEBA - Sofia Air Project (Under construction)"),
@@ -12,12 +12,13 @@ ui <- bootstrapPage(
                             "Date and time of prediction: (NOT INTEGRATED YET)", 
                             min=1,
                             max=24,
-                            value=1
+                            value=1,
                             #min = as.POSIXct("2019-02-25 00:00"),
                             #max = as.POSIXct("2019-02-25 23:00"),
                             #value = c(as.POSIXct("2019-02-25 01:00")),
                             #step = 3600, # 60 secs * 60 mins
                             #timeFormat = "%a %H:%M", ticks = F, animate = T
+                            animate=animationOptions(1000)
                 )
   )
 )
@@ -68,4 +69,4 @@ server <- function(input, output, session) {
 
 }
 
-shinyApp(ui, server)
+if (interactive()) shinyApp(ui, server)
